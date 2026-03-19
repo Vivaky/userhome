@@ -6,7 +6,7 @@ output=""
 greg_code=0
 is_empty=1
 
-if [ "$1" == "-h" -o "$1" == "--help" -o "$1" == "--usage" ]; then
+if [ "$1" == "-h" -o "$1" == "--help" -o "$1" == "--usage" -o $# -gt 3 -o "$2" == "-f" -o "$3" == "-f" -o \( $# -gt 1 -a ! "$1" == "-f" \) ]; then
 echo $usage;
 exit 0;
 fi
